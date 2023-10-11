@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import {Central} from 'lionrockjs';
+import {Central} from '@lionrockjs/central';
 import Server from './Server.mjs';
 
 Central.ENV = Central.ENV_DEVE;

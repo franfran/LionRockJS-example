@@ -2,7 +2,7 @@ import * as url from 'node:url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url)).replace(/\/$/, '');
 
 import path from 'node:path';
-import {Central} from 'lionrockjs';
+import {Central} from '@lionrockjs/central';
 
 export default class Server {
   constructor(port = 8001) {
