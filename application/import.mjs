@@ -10,6 +10,11 @@ ControllerMixinDatabase.defaultAdapter = DatabaseAdapterBetterSQLite3;
 await (async () => {
   Central.addModules([
     AdapterViewLiquid,
+    await import('@lionrockjs/mod-form'),
+    await import('@lionrockjs/mod-crypto'),
     await import('@lionrockjs/mod-session'),
+    await import('@lionrockjs/mod-auth'),
+    await import('@lionrockjs/adapter-auth-password'),
+    await import('@lionrockjs/mod-admin'),
   ]);
 })();

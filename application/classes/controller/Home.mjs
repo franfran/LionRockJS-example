@@ -19,6 +19,8 @@ export default class ControllerHome extends Controller{
     });
     const session = this.state.get(Controller.STATE_REQUEST).session;
     session.name = "lorem lipsum";
+
+    console.trace('hello');
 //    this.state.get(Controller.STATE_COOKIES).push({name:"hello", value:"world", options: Central.config.cookie.options});
   }
 

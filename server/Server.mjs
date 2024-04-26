@@ -2,7 +2,7 @@ import * as url from 'node:url';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url)).replace(/\/$/, '');
 
 import path from 'node:path';
-import {Central, HelperPath} from '@lionrockjs/central';
+import {Central, RouteList} from '@lionrockjs/central';
 
 export default class Server {
   constructor(port = 8001) {
@@ -19,7 +19,7 @@ export default class Server {
 
     await import('../application/import.mjs');
     await import('../application/routes.mjs');
-    await HelperPath.reloadModuleInit();
+    await Central.reloadModuleInit(true);
 
     this.adapter = Central.config.site?.platform?.adapter || {setup: async ()=>({listen: port => console.log(`app listening at ${port}`)})};
     this.app = await this.adapter.setup();
@@ -27,6 +27,7 @@ export default class Server {
 
   async listen() {
     console.log(Central.ENV, Central.config);
+    console.log(Array.from(RouteList.routeMap.values()).map(route => route.path + " " + route.method + ' => '+ route.controller + '::action_' + route.action).sort());
     await this.app.listen(this.port);
     console.log(`app listening at ${this.port}`);
   }
