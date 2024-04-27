@@ -1,0 +1,102 @@
+{% assign cacheId = 1 %}
+<!doctype html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/media/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/media/favicon/favicon.ico" type="image/x-icon"/>
+    <title>KohanaJS Admin</title>
+
+    <script type="application/javascript" src="/media/js/lib/vh.js"></script>
+
+    <link rel="stylesheet" href="/media/css/preload.css?r={{ cacheId }}" />
+    <link rel="stylesheet" href="/media/vendors/fontawesome/css/all.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/media/css/bootstrap.css?r={{ cacheId }}" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/media/css/bootstrap-utils.css?r={{ cacheId }}" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/media/css/admin.css?r={{ cacheId }}" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="/media/css/admin/pages.css?r={{ cacheId }}" media="print" onload="this.media='all'" />
+    {% for css in stylesheets %}    <link rel="stylesheet" href="/media/css/{{ css }}?r={{ cacheId }}"  media="print" onload="this.media='all'" />
+    {% endfor %}
+
+    {% for script in external_scripts %}    <script type="application/javascript" src="{{ script }}" async></script>
+    {% endfor %}
+
+    {% for script in defer_scripts %}    <script type="application/javascript" src="/media/js/{{ script }}?r={{ cacheId }}" defer></script>
+    {% endfor %}
+
+</head>
+<body class="{{ controller }} {{ controller }}-{{ action }} role-{{ user_role }}">
+    <nav id="nav-menu" class="sidebar" data-highlight="{{ controller }}">
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark">
+            <span id="nav-menu-close" class="fs-4 mx-3 text-light"><i class="fal fa-times"></i></span>
+            <hr>
+            {% render "admin/nav", controller: controller, action: action %}
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" style="">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="p-3 mb-3 border-bottom bg-light text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 d-flex flex-row align-items-center ">
+                    <div id="nav-menu-toggle">
+                        <div class="hamburger"><span class="bar"></span></div>
+                    </div>
+
+                    <div class="logo mx-3"></div>
+                </div>
+                <div class="col-6 d-flex flex-row justify-content-end align-items-center">
+                  <span class="note me-lg-3">
+                    {% if last_login_date %}
+                    <span class="last_login_date">Last Login: {{ last_login_date | to_time | date: "%Y-%m-%d %H:%M:%S" }}</span>
+                    {% endif %}
+                  </span>
+                  <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            RO
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                            <li><a class="dropdown-item" href="/account">{{ user_full_name }}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+      {{ main }}
+    </main>
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container text-light">
+        {% if last_login_date %}
+          <span class="last_login_ip">Last Login IP: {{ last_login_ip }}</span>
+        {% endif %}
+        <span>Your IP: {{ ip }}</span>
+      </div>
+    </footer>
+
+    <script type="application/javascript" src="/media/js/lib/cookie-consent.js"></script>
+    <script type="application/javascript" src="/media/vendors/bootstrap/js/bootstrap.min.js" ></script>
+    <script type="application/javascript" src="/media/js/admin.js?r={{ cacheId }}" ></script>
+{% for script in scripts %}    <script type="application/javascript" src="/media/js/{{ script }}?r={{ cacheId }}" ></script>
+{% endfor %}
+</body>
+</html>
