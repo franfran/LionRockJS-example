@@ -11,7 +11,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@lionrockjs/mvc": "^1.1.0",
-    "@lionrockjs/platform-web-fastify": "^1.0.0"
+    "@lionrockjs/adapter-view-liquidjs": "^0.0.1",
+    "@lionrockjs/central": "^0.0.1",
+    "@lionrockjs/mvc": "^1.2.0",
+    "@lionrockjs/platform-web-fastify": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "pluralize": "^8.0.0"
   }
 }
