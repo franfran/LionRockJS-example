@@ -20,7 +20,10 @@
     "@lionrockjs/mod-crypto":"^0.0.1",
     "@lionrockjs/mod-session": "^0.0.2",
     "@lionrockjs/mod-auth": "^0.0.1",
+    "@lionrockjs/adapter-auth-password": "^0.0.1",
     "@lionrockjs/mixin-orm": "^0.0.1",
+    "@lionrockjs/mod-admin": "^0.0.1",
+    "@lionrockjs/mod-admin-cms": "^0.0.1",
     "dotenv": "^16.4.5",
     "pluralize": "^8.0.0"
   }
