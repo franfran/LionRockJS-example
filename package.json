@@ -15,6 +15,12 @@
     "@lionrockjs/central": "^0.0.2",
     "@lionrockjs/mvc": "^1.2.0",
     "@lionrockjs/platform-web-fastify": "^1.0.1",
+    "@lionrockjs/adapter-database-better-sqlite3": "^0.0.1",
+    "@lionrockjs/mod-form": "^0.0.2",
+    "@lionrockjs/mod-crypto":"^0.0.1",
+    "@lionrockjs/mod-session": "^0.0.2",
+    "@lionrockjs/mod-auth": "^0.0.1",
+    "@lionrockjs/mixin-orm": "^0.0.1",
     "dotenv": "^16.4.5",
     "pluralize": "^8.0.0"
   }
