@@ -14,6 +14,8 @@
     "@lionrockjs/central": "^0.0.2",
     "@lionrockjs/mvc": "^1.2.0",
     "@lionrockjs/platform-web-fastify": "^1.0.1",
+    "@lionrockjs/adapter-view-liquidjs": "^0.0.2",
+    "@lionrockjs/mod-form": "^0.0.2",
     "dotenv": "^16.4.5"
   }
 }
