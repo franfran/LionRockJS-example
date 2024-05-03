@@ -1,7 +1,7 @@
-import { ServerAdapterFastify } from "@lionrockjs/platform-web-fastify";
+import { ServerAdapterExpress } from "@lionrockjs/platform-web-express";
 
 export default {
   platform:{
-    adapter: ServerAdapterFastify
+    adapter: ServerAdapterExpress
   }
 };
