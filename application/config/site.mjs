@@ -1,7 +1,7 @@
-import { ServerAdapterFastify } from "@lionrockjs/platform-web-fastify";
+import { ServerAdapterNodeHTTP } from "@lionrockjs/platform-web-node-http";
 
 export default {
   platform:{
-    adapter: ServerAdapterFastify
+    adapter: ServerAdapterNodeHTTP
   }
 };
