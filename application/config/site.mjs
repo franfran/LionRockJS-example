@@ -1,7 +1,7 @@
-import { ServerAdapterExpress } from "@lionrockjs/platform-web-express";
+import { ServerAdapterNodeHTTP } from "@lionrockjs/platform-web-node-http";
 
 export default {
   platform:{
-    adapter: ServerAdapterExpress
+    adapter: ServerAdapterNodeHTTP
   }
 };
