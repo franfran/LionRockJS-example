@@ -1,0 +1,59 @@
+interface IIdentifier {
+  name: String! @unique
+  belongsTo: Users
+}
+
+type Persons{
+  first_name: String!
+  last_name: String
+  phone: String
+  email: String
+}
+
+type Roles implements IName {
+  name: String
+}
+
+type Users{
+  belongsTo: Persons
+  hasAndBelongsToMany: Roles
+  activated: Boolean @default( value: false )
+}
+
+type IdentifierUsers implements IIdentifier{
+  name: String! @unique
+  belongsTo: Users
+}
+
+type IdentifierPasswords implements IIdentifier{
+  name: String! @unique
+  hash: String!
+  belongsTo: Users
+}
+
+type IdentifierEmails implements IIdentifier{
+  name: String! @unique
+  verified: Boolean @default( value: true )
+  verify_code: String
+  hash: String!
+  belongsTo: Users
+}
+
+type IdentifierPhones implements IIdentifier{
+  name: String! @unique
+  verified: Boolean @default( value: true )
+  verify_code: String
+  hash: String!
+  belongsTo: Users
+}
+
+type IdentifierSocials implements IIdentifier{
+  name: String! @unique
+  belongsTo: Users
+}
+
+type Logins{
+  ip: String
+  note: String
+  belongsTo: Users
+}

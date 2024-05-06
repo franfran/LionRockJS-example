@@ -1,0 +1,16 @@
+type Mail {
+  domain: String!
+  service: String!
+  ip: String!
+  entity: String
+  entity_id: String
+  sender: String!
+  recipient: String!
+  cc: String
+  bcc: String
+  subject: String
+  text_template: String
+  html_template : String
+  tokens: String
+  result: String
+}
