@@ -21,7 +21,7 @@
     "@lionrockjs/mixin-session": "^0.0.2",
     "@lionrockjs/mod-auth": "^0.0.2",
     "@lionrockjs/mod-admin": "^0.0.2",
-    "@lionrockjs/platform-web-fastify": "^0.0.1",
+    "@lionrockjs/platform-web-node-http": "^0.0.4",
     "dotenv": "^16.4.5",
     "pluralize": "^8.0.0"
   }
