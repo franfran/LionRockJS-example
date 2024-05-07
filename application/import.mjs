@@ -6,6 +6,6 @@ View.DefaultViewClass = LiquidView;
 await (async () => {
   Central.addModules([
     AdapterViewLiquid,
-    await import('@lionrockjs/mod-form'),
+    await import('@lionrockjs/mixin-form'),
   ]);
 })();

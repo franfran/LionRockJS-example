@@ -1,6 +1,6 @@
 import {Controller} from '@lionrockjs/mvc';
 import {ControllerMixinView} from '@lionrockjs/central';
-import {ControllerMixinMultipartForm} from '@lionrockjs/mod-form';
+import {ControllerMixinMultipartForm} from '@lionrockjs/mixin-form';
 
 export default class ControllerHome extends Controller{
   static mixins = [ControllerMixinMultipartForm, ControllerMixinView];
