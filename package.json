@@ -12,12 +12,10 @@
   "type": "module",
   "dependencies": {
     "@lionrockjs/adapter-view-liquidjs": "^0.0.2",
-    "@lionrockjs/central": "^0.0.7",
+    "@lionrockjs/central": "^0.0.8",
     "@lionrockjs/mvc": "^0.0.1",
-    "@lionrockjs/platform-web-node-http": "^0.0.2",
+    "@lionrockjs/platform-web-node-http": "^0.0.3",
     "dotenv": "^16.4.5",
-    "pluralize": "^8.0.0",
-    "mime": "^4.0.3",
-    "find-my-way": "^8.2.0"
+    "pluralize": "^8.0.0"
   }
 }
