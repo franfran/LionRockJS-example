@@ -23,6 +23,8 @@
     "@lionrockjs/mod-admin": "^0.0.2",
     "@lionrockjs/platform-web-node-http": "^0.0.2",
     "dotenv": "^16.4.5",
-    "pluralize": "^8.0.0"
+    "pluralize": "^8.0.0",
+    "mime": "^4.0.3",
+    "find-my-way": "^8.2.0"
   }
 }
