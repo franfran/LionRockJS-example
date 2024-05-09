@@ -18,7 +18,7 @@
     "@lionrockjs/adapter-database-better-sqlite3": "^0.0.1",
     "@lionrockjs/mixin-form": "^0.0.1",
     "@lionrockjs/mixin-session": "^0.0.2",
-    "@lionrockjs/mod-auth": "^0.0.2",
+    "@lionrockjs/mod-auth": "^0.0.3",
     "@lionrockjs/adapter-auth-password": "^0.0.2",
     "@lionrockjs/mixin-orm": "^0.0.2",
     "@lionrockjs/mod-admin": "^0.0.3",
