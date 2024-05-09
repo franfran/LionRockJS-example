@@ -1,4 +1,4 @@
-import { ServerAdapterFastify as ServerAdapter } from "@lionrockjs/platform-web-fastify";
+import { ServerAdapterExpress as ServerAdapter } from "@lionrockjs/platform-web-express";
 import { Central } from "@lionrockjs/central";
 
 export default {
