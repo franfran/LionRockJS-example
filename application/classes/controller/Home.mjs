@@ -1,6 +1,6 @@
 import {Controller} from '@lionrockjs/mvc';
 import {ControllerMixinView, Central, ControllerMixinDatabase} from '@lionrockjs/central';
-import {ControllerMixinSession} from '@lionrockjs/mod-session';
+import {ControllerMixinSession} from '@lionrockjs/mixin-session';
 import fs from 'node:fs';
 import path from 'node:path';
 
