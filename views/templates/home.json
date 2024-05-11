@@ -1,0 +1,24 @@
+{
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+      }
+    },
+    "paragraphs": {
+      "type": "paragraphs",
+      "settings": {
+      }
+    },
+    "dev_footer": {
+      "type": "dev-footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "header",
+    "paragraphs",
+    "dev_footer"
+  ]
+}
