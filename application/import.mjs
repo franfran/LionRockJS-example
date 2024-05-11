@@ -15,6 +15,7 @@ await (async () => {
     await import('@lionrockjs/mixin-session'),
     await import('@lionrockjs/mod-auth'),
     await import('@lionrockjs/adapter-auth-password'),
+    await import('@lionrockjs/mixin-orm'),
     await import('@lionrockjs/mod-admin'),
   ]);
 })();
