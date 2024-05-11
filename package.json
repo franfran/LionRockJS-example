@@ -11,8 +11,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@lionrockjs/mvc": "^1.1.0",
-    "@lionrockjs/platform-web-fastify": "^1.0.0",
+    "@lionrockjs/mvc": "^0.0.1",
+    "@lionrockjs/platform-web-fastify": "^0.0.1",
     "dotenv": "^16.3.1",
     "mime": "^3.0.0",
     "sortablejs": "^1.15.2"
